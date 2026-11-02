@@ -17,4 +17,4 @@ void station_load_car(struct station *station, int count);
 void station_wait_for_car(struct station *station);
 void station_on_board(struct station *station);
 
-#endif SYNC_CAR_H
+#endif /* SYNC_CAR_H */
