@@ -7,6 +7,7 @@ struct station {
   pthread_mutex_t lock;
   pthread_cond_t car_arrive;
   pthread_cond_t all_boarded;
+  pthread_cond_t car_ready;
   int waiting;
   int free_seats;
   int boarding;
