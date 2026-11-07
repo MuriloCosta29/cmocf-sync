@@ -7,6 +7,7 @@ Atividade de Infraestrutura de Software: sincronização de carros e passageiros
 - `sync_car.h`: declara `struct station` e os protótipos das funções.
 - `sync_car.c`: implementa `station_init`, `station_load_car`, `station_wait_for_car` e `station_on_board`.
 - `sync_car-runner.c`: programa de teste fornecido (cria 100 passageiros e vários carros).
+- `teste_limites.c`: teste próprio dos casos limite e inválido (`count` 0, `count` negativo, sem passageiros, menos assentos que passageiros).
 - `Makefile`: compila e limpa o projeto.
 
 ## Como usar
@@ -21,6 +22,13 @@ Executar e testar (compila e roda o teste; o resultado esperado termina com `Loo
 
 ```sh
 make test
+```
+
+Testar os casos limite (deve terminar com `RESULTADO: tudo OK`):
+
+```sh
+cc -Wall -pthread -o teste_limites teste_limites.c sync_car.c
+./teste_limites
 ```
 
 Limpar o executável:
