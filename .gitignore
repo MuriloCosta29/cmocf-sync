@@ -54,3 +54,4 @@ dkms.conf
 # debug information files
 *.dwo
 sync_car
+.DS_Store
